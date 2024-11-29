@@ -1,0 +1,25 @@
+# Base class: Animal
+class Animal:
+    def move(self):
+        raise NotImplementedError("This method should be implemented by subclasses.")
+
+# Subclass: Dog
+class Dog(Animal):
+    def move(self):
+        return "Walking and running "
+
+# Subclass: Bird
+class Bird(Animal):
+    def move(self):
+        return "Flying high "
+
+# Subclass: Fish
+class Fish(Animal):
+    def move(self):
+        return "Swimming gracefully "
+
+# Create objects of each class and demonstrate polymorphism
+animals = [Dog(), Bird(), Fish()]
+
+for animal in animals:
+    print(animal.move())
